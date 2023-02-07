@@ -3,8 +3,8 @@
 Open the terminal (command prompt on Windows), and type the following:
 `git clone https://github.com/Ethalides33/Nanosens.git`
 
-Then, enter the newly created directory:
-cd Nanosens
+Then, enter the newly created directory:<br/>
+`cd Nanosens`
 
 Now, create a python virtual environment. This step is not mandatory, but it is a good
 habit to take. To create the virtual environment (venv), simply type:
