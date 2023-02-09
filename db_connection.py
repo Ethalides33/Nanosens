@@ -47,7 +47,7 @@ def generate_spectrum_key(conn, article_key, x_data_header, y_data_header):
 def send_spectrum_data(conn, spectrum_data, article_key, spectrum_key):
   spectrum_query = '''INSERT IGNORE INTO spectra (key_spectrum, article_key, material, coating, mean_d_nw, mean_l_nw, post_treatment, sim_data, comments, date_added) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)'''
   print('sending spectrum data')
-  spectrum_vals = (spectrum_key, article_key, spectrum_data['material'], spectrum_data['coating'], spectrum_data['nw_length'], spectrum_data['nw_diameter'], spectrum_data['post_treatment'], spectrum_data['sim_data'], spectrum_data['comments'], date.date.today())
+  spectrum_vals = (spectrum_key, article_key, spectrum_data['material'], spectrum_data['coating'], spectrum_data['nw_diameter'], spectrum_data['nw_length'], spectrum_data['post_treatment'], spectrum_data['sim_data'], spectrum_data['comments'], date.date.today())
   if conn.is_connected:
       cursor = conn.cursor(buffered=True)
       try:
