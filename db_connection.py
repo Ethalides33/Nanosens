@@ -3,7 +3,7 @@ from mysql.connector import errorcode
 from config import config
 import datetime as date
 
-gui_to_mysql_equiv = {'amd':'amd', 'Rs':'sheet_res', 'T':'trans', 'Haze':'haze', 'Emissivity':'emissivity', 'Lnw': 'nw_length', 'Dnw':'nw_diameter'}
+gui_to_mysql_equiv = {'amd':'amd', 'Rs':'sheet_res', 'T':'trans', 'Haze':'haze', 'Emissivity':'emissivity', 'Lnw': 'nw_length', 'Dnw':'nw_diameter', 'Wavelength':'wavelength'}
 
 def logToDB():
   try:
@@ -45,9 +45,9 @@ def generate_spectrum_key(conn, article_key, x_data_header, y_data_header):
   return temp_key
 
 def send_spectrum_data(conn, spectrum_data, article_key, spectrum_key):
-  spectrum_query = '''INSERT IGNORE INTO spectra (key_spectrum, article_key, material, coating, mean_d_nw, mean_l_nw, post_treatment, sim_data, comments, date_added) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)'''
+  spectrum_query = '''INSERT IGNORE INTO spectra (key_spectrum, article_key, material, coating, mean_d_nw, mean_l_nw, fabrication_method, post_treatment, sim_data, comments, date_added) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)'''
   print('sending spectrum data')
-  spectrum_vals = (spectrum_key, article_key, spectrum_data['material'], spectrum_data['coating'], spectrum_data['nw_diameter'], spectrum_data['nw_length'], spectrum_data['post_treatment'], spectrum_data['sim_data'], spectrum_data['comments'], date.date.today())
+  spectrum_vals = (spectrum_key, article_key, spectrum_data['material'], spectrum_data['coating'], spectrum_data['nw_diameter'], spectrum_data['nw_length'], spectrum_data['fabrication_method'], spectrum_data['post_treatment'], spectrum_data['sim_data'], spectrum_data['comments'], date.date.today())
   if conn.is_connected:
       cursor = conn.cursor(buffered=True)
       try:

@@ -168,7 +168,7 @@ class Window(QMainWindow, Ui_MainWindow):
                 self.Log('NW diameter must be of type float.')
                 return False
 
-        spectrum_data = {'material': self.material_box.currentText(), 'coating':self.coating_box.currentText(), 'nw_length':self.nw_length_text.text(), 'nw_diameter':self.nw_diameter_text.text(), 'post_treatment':self.post_treatment_box.currentText(), 'sim_data':str(int(self.sim_checkbox.isChecked())), 'comments':self.spectrum_comments_text.toPlainText()}
+        spectrum_data = {'material': self.material_box.currentText(), 'coating':self.coating_box.currentText(), 'nw_length':self.nw_length_text.text(), 'nw_diameter':self.nw_diameter_text.text(), 'fabrication_method': self.fabrication_box.currentText(),'post_treatment':self.post_treatment_box.currentText(), 'sim_data':str(int(self.sim_checkbox.isChecked())), 'comments':self.spectrum_comments_text.toPlainText()}
         
         if not spectrum_data['nw_length']:
             spectrum_data['nw_length'] = None
