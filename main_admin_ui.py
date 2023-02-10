@@ -2,6 +2,7 @@ import sys
 import webbrowser
 import qdarktheme as dtheme
 import numpy as np
+from math import sin, tan, radians
 
 import db_connection as db
 
@@ -75,6 +76,8 @@ class Window(QMainWindow, Ui_MainWindow):
         self.reset_spectrum_metadata_button.clicked.connect(self.reset_spectrum_metadata)
         self.reset_spectrum_data_button.clicked.connect(self.reset_spectrum_data)
         self.commit_data_button.clicked.connect(self.send_data)
+
+        self.apply_button.clicked.connect(self.apply_transformation)
 
 
     def rename_x_column(self):
@@ -195,6 +198,79 @@ class Window(QMainWindow, Ui_MainWindow):
                         check = False
         self.reset_spectrum_data() #○delete data after commit
         return check, filtered_data
+
+
+    def apply_transformation(self):
+        # Custom factor has priority over toolbox.
+        column_index = 0 if str(self.apply_toolbox.currentText()) == 'X column' else 1
+
+        if self.customfactor_text.text():
+            self.apply_custom_factor(column_index, str(self.customfactor_text.text()))
+            return
+        else:
+            choice = str(self.transformation_toolbox.currentText())
+            if choice == 'X100':
+                self.apply_custom_factor(column_index, '100')
+                return
+            elif choice == '#/m^2->mg/m^2':
+                if self.nw_diameter_text.text() is None or self.nw_length_text.text() is None:
+                    self.Log('Mean diameter and lenth of the nanowires are required to perform this transformation ! Cancelling operation.')
+                    return
+                try:
+                    diameter = float(str(self.nw_diameter_text.text()))
+                    length = float(str(self.nw_length_text.text()))
+                except:
+                    self.Log('Diameter and length of diameter must be of type float!')
+                    return
+
+                factor = str(1.049*10**(-8) * length * (5*(diameter*10**(-3))**2)/(16*sin(radians(54))**2*tan(radians(36)))) #all in micrometers, returns mg
+                self.apply_custom_factor(column_index, factor)
+                return
+            elif choice == '/cm^2-> /m^2':
+                self.apply_custom_factor(column_index, '10000')
+                return
+            elif choice == '/mm^2 -> /m^2':
+                self.apply_custom_factor(column_index, '1000000')
+                return
+            elif choice == 'Cond to res':
+                self.inverse_data(column_index)
+                return
+            return
+        
+
+    def apply_custom_factor(self, column_index, factor):
+        try:
+            factor = float(factor)
+        except:
+            self.Log('Factor must be of type float ! Cancelling operation.')
+            return
+
+        for r in range(self.data_table.rowCount()):
+            if(self.data_table.item(r,column_index) is not None): #Should check if int or str depending on column.
+                try:
+                    float(str(self.data_table.item(r,column_index).text()))
+                except:
+                    self.Log('Data must all be of type float ! Cancelling operation.')
+                    return
+                self.data_table.setItem(r, column_index, QTableWidgetItem(str(factor*float(str(self.data_table.item(r,column_index).text())))))
+        self.Log('Applied custom factor to column ' + str(self.apply_toolbox.currentText()))
+        return
+
+    def inverse_data(self, column_index):
+        for r in range(self.data_table.rowCount()):
+            if(self.data_table.item(r,column_index) is not None): #Should check if int or str depending on column.
+                try:
+                    float(str(self.data_table.item(r,column_index).text()))
+                except:
+                    self.Log('Data must all be of type float ! Cancelling operation.')
+                    return
+                if float(str(self.data_table.item(r,column_index).text())) == 0:
+                    self.Log('Cannot divide by zero. Cancelling operation.')
+                    return
+                self.data_table.setItem(r, column_index, QTableWidgetItem(str(1/float(str(self.data_table.item(r,column_index).text())))))
+        
+        self.Log('Inverted data for column ' + str(self.apply_toolbox.currentText()))
+        return
 
     def dragEnterEvent(self, event):
         if event.mimeData().hasUrls():

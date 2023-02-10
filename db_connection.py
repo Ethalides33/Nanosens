@@ -70,7 +70,9 @@ def send_values_data(conn, values_data, spectrum_key, x_data_header, y_data_head
   data_query = '''INSERT INTO data ''' + columns + ''' VALUES (%s, %s, %s)'''
   print(data_query)
   for r in values_data:
-    formatted_data.append((spectrum_key, r[0], r[1]))
+    temp_x = '{:.3f}'.format(float(r[0]))
+    temp_y = '{:.3f}'.format(float(r[1]))
+    formatted_data.append((spectrum_key, temp_x, temp_y))
 
   print(formatted_data)
   if conn.is_connected:
