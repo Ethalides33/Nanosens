@@ -1,0 +1,1691 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1567</width>
+    <height>1083</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <widget class="QWidget" name="gridLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>1721</width>
+      <height>993</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout" rowstretch="0,0,13,15,10,5" columnstretch="0,0,0,0,0,0">
+     <property name="verticalSpacing">
+      <number>16</number>
+     </property>
+     <item row="4" column="0" colspan="4">
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <property name="spacing">
+        <number>12</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="logs_label">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: white;</string>
+         </property>
+         <property name="text">
+          <string>Logs</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTextBrowser" name="logs_text"/>
+       </item>
+      </layout>
+     </item>
+     <item row="3" column="0" colspan="4">
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <property name="spacing">
+        <number>12</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="spectrum_metadata_main_label">
+         <property name="font">
+          <font>
+           <pointsize>14</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: white;</string>
+         </property>
+         <property name="text">
+          <string>Spectrum metadata</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QGridLayout" name="gridLayout_3">
+         <property name="horizontalSpacing">
+          <number>18</number>
+         </property>
+         <property name="verticalSpacing">
+          <number>7</number>
+         </property>
+         <item row="1" column="0">
+          <widget class="QComboBox" name="material_box">
+           <property name="styleSheet">
+            <string notr="true">color:white;</string>
+           </property>
+           <property name="currentText">
+            <string>Silver</string>
+           </property>
+           <item>
+            <property name="text">
+             <string>Silver</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Copper</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Nickel</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item row="0" column="3">
+          <widget class="QLabel" name="nw_diameter_label">
+           <property name="styleSheet">
+            <string notr="true">color: white;</string>
+           </property>
+           <property name="text">
+            <string>NWs mean diameter (nm)</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="7">
+          <widget class="QLabel" name="label_14">
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="6">
+          <widget class="QComboBox" name="post_treatment_box">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>1</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color:white;</string>
+           </property>
+           <item>
+            <property name="text">
+             <string>Thermal annealing</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Eletrical annealing</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>UV treatment</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Plasma etching</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Chemical treatment</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Evaporation</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>None</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Other</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Unknown</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item row="1" column="5">
+          <widget class="QComboBox" name="fabrication_box">
+           <property name="styleSheet">
+            <string notr="true">color:white;</string>
+           </property>
+           <item>
+            <property name="text">
+             <string>Spin coating</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Roll2roll</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Drop coating</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Spray coating</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Electrospinning</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Rod coating</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Slot die coating</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Unknown</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Other</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLabel" name="coating_label">
+           <property name="styleSheet">
+            <string notr="true">color: white;</string>
+           </property>
+           <property name="text">
+            <string>Coating</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="3">
+          <widget class="QLineEdit" name="nw_diameter_text">
+           <property name="styleSheet">
+            <string notr="true">color:white;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <widget class="QLineEdit" name="nw_length_text">
+           <property name="styleSheet">
+            <string notr="true">color:white;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLabel" name="material_label">
+           <property name="styleSheet">
+            <string notr="true">color: white;</string>
+           </property>
+           <property name="text">
+            <string>Material</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QComboBox" name="coating_box">
+           <property name="styleSheet">
+            <string notr="true">color:white;</string>
+           </property>
+           <item>
+            <property name="text">
+             <string>None</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>SnO2</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Graphene</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Polymer</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Al2O3</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>ZnO/Al2O3</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>ZnO</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>SiO2</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Other</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Unknown</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item row="1" column="7">
+          <widget class="QCheckBox" name="sim_checkbox">
+           <property name="styleSheet">
+            <string notr="true">color:white;</string>
+           </property>
+           <property name="text">
+            <string>Sim. data</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="5">
+          <widget class="QLabel" name="fabrication_label">
+           <property name="styleSheet">
+            <string notr="true">color:white;</string>
+           </property>
+           <property name="text">
+            <string>Fabrication method</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <widget class="QLabel" name="nw_length_label">
+           <property name="styleSheet">
+            <string notr="true">color: white;</string>
+           </property>
+           <property name="text">
+            <string>NWs mean length (um)</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="6">
+          <widget class="QLabel" name="post_treatment_label">
+           <property name="styleSheet">
+            <string notr="true">color:white;</string>
+           </property>
+           <property name="text">
+            <string>Post-treatment</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="spectrum_comments_label">
+           <property name="styleSheet">
+            <string notr="true">color: white;</string>
+           </property>
+           <property name="text">
+            <string>Comments</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="4">
+          <widget class="QLabel" name="substrate_label">
+           <property name="styleSheet">
+            <string notr="true">color:white;</string>
+           </property>
+           <property name="text">
+            <string>Substrate</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="4">
+          <widget class="QComboBox" name="substrate_box">
+           <property name="styleSheet">
+            <string notr="true">color:white;</string>
+           </property>
+           <item>
+            <property name="text">
+             <string>Glass</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>PET</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>PEN</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Polycarbonate (PC)</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Other polymer</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Other</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Unknown</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QTextEdit" name="spectrum_comments_text">
+         <property name="styleSheet">
+          <string notr="true">color:white;</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="3" column="4" rowspan="2">
+      <widget class="QTableWidget" name="data_table">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="MinimumExpanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color:white;</string>
+       </property>
+       <property name="horizontalScrollBarPolicy">
+        <enum>Qt::ScrollBarAsNeeded</enum>
+       </property>
+       <property name="sizeAdjustPolicy">
+        <enum>QAbstractScrollArea::AdjustToContentsOnFirstShow</enum>
+       </property>
+       <property name="dragDropMode">
+        <enum>QAbstractItemView::DragDrop</enum>
+       </property>
+       <property name="rowCount">
+        <number>50</number>
+       </property>
+       <attribute name="horizontalHeaderVisible">
+        <bool>true</bool>
+       </attribute>
+       <attribute name="horizontalHeaderCascadingSectionResizes">
+        <bool>false</bool>
+       </attribute>
+       <attribute name="horizontalHeaderMinimumSectionSize">
+        <number>49</number>
+       </attribute>
+       <attribute name="horizontalHeaderDefaultSectionSize">
+        <number>225</number>
+       </attribute>
+       <attribute name="horizontalHeaderHighlightSections">
+        <bool>false</bool>
+       </attribute>
+       <attribute name="horizontalHeaderStretchLastSection">
+        <bool>false</bool>
+       </attribute>
+       <attribute name="verticalHeaderVisible">
+        <bool>false</bool>
+       </attribute>
+       <attribute name="verticalHeaderCascadingSectionResizes">
+        <bool>false</bool>
+       </attribute>
+       <attribute name="verticalHeaderHighlightSections">
+        <bool>true</bool>
+       </attribute>
+       <attribute name="verticalHeaderStretchLastSection">
+        <bool>false</bool>
+       </attribute>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row/>
+       <row/>
+       <row/>
+       <row/>
+       <row/>
+       <row/>
+       <row/>
+       <row/>
+       <row/>
+       <row/>
+       <row/>
+       <row/>
+       <row/>
+       <row/>
+       <row/>
+       <row/>
+       <column>
+        <property name="text">
+         <string>amd (mg/m^2)</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Rs (Ohms)</string>
+        </property>
+       </column>
+      </widget>
+     </item>
+     <item row="2" column="4">
+      <layout class="QGridLayout" name="gridLayout_4">
+       <property name="leftMargin">
+        <number>7</number>
+       </property>
+       <property name="horizontalSpacing">
+        <number>7</number>
+       </property>
+       <property name="verticalSpacing">
+        <number>10</number>
+       </property>
+       <item row="9" column="0">
+        <spacer name="verticalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="8" column="0">
+        <widget class="QLabel" name="reset_spectrum_data_label">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: white;</string>
+         </property>
+         <property name="text">
+          <string>Reset table data</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <spacer name="verticalSpacer_7">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="11" column="0">
+        <spacer name="verticalSpacer_11">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="6" column="1">
+        <widget class="QPushButton" name="reset_article_data_button">
+         <property name="font">
+          <font>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton
+{
+color:white;
+background-color:#CD0404;
+}
+QPushButton::hover
+{
+color:white;
+background-color:#E94560;
+}</string>
+         </property>
+         <property name="text">
+          <string>Reset</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <spacer name="verticalSpacer_10">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="5" column="0">
+        <spacer name="verticalSpacer_13">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="7" column="1">
+        <widget class="QPushButton" name="reset_spectrum_metadata_button">
+         <property name="font">
+          <font>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton
+{
+color:white;
+background-color:#CD0404;
+}
+QPushButton::hover
+{
+color:white;
+background-color:#E94560;
+}</string>
+         </property>
+         <property name="text">
+          <string>Reset</string>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="1">
+        <widget class="QPushButton" name="reset_spectrum_data_button">
+         <property name="font">
+          <font>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton
+{
+color:white;
+background-color:#CD0404;
+}
+QPushButton::hover
+{
+color:white;
+background-color:#E94560;
+}</string>
+         </property>
+         <property name="text">
+          <string>Reset</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="13" column="0">
+        <widget class="QLabel" name="spectrum_data_main_label">
+         <property name="font">
+          <font>
+           <pointsize>14</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:white;</string>
+         </property>
+         <property name="text">
+          <string>Spectrum data</string>
+         </property>
+        </widget>
+       </item>
+       <item row="16" column="1">
+        <widget class="QLabel" name="y_column_data_label">
+         <property name="styleSheet">
+          <string notr="true">color: white;</string>
+         </property>
+         <property name="text">
+          <string>Y data</string>
+         </property>
+        </widget>
+       </item>
+       <item row="17" column="0">
+        <widget class="QComboBox" name="x_data_box">
+         <property name="styleSheet">
+          <string notr="true">color:white;</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>amd (mg/m^2)</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Bending Radius (mm)</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Rs (Ohms)</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>T (%)</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Haze (%)</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Emissivity (%)</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Lnw (um)</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Dnw (nm)</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Wavelength (nm)</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Coating thickness (nm)</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Max temp. (C)</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="15" column="0">
+        <spacer name="verticalSpacer_4">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="4" column="0">
+        <spacer name="verticalSpacer_12">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="7" column="0">
+        <widget class="QLabel" name="reset_spectrum_metadata_label">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: white;</string>
+         </property>
+         <property name="text">
+          <string>Reset spectrum metadata</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <spacer name="verticalSpacer_6">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="17" column="1">
+        <widget class="QComboBox" name="y_data_box">
+         <property name="styleSheet">
+          <string notr="true">color:white;</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>Rs (Ohms)</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Bending radius (mm)</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>T (%)</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Haze (%)</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Emissivity (%)</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Lnw (um)</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Dnw (nm)</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>amd (mg/m^2)</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Coating thickness (nm)</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Max temp. (C)</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="16" column="0">
+        <widget class="QLabel" name="x_column_data_label">
+         <property name="styleSheet">
+          <string notr="true">color: white;</string>
+         </property>
+         <property name="text">
+          <string>X data</string>
+         </property>
+        </widget>
+       </item>
+       <item row="10" column="0">
+        <spacer name="verticalSpacer_9">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="12" column="0">
+        <spacer name="verticalSpacer_8">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="6" column="0">
+        <widget class="QLabel" name="reset_article_label">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: white;</string>
+         </property>
+         <property name="text">
+          <string>Reset article data</string>
+         </property>
+        </widget>
+       </item>
+       <item row="14" column="0">
+        <spacer name="verticalSpacer_5">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="13" column="1">
+        <widget class="QPushButton" name="commit_data_button">
+         <property name="font">
+          <font>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton
+{
+color:white;
+background-color:#03C988;
+}
+QPushButton::hover
+{
+color:white;
+background-color:#6ECCAF;
+}</string>
+         </property>
+         <property name="text">
+          <string>Commit</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="1" column="1">
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="2" column="5">
+      <spacer name="horizontalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Fixed</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>160</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="3" column="5">
+      <widget class="QFrame" name="gridFrame_2">
+       <property name="styleSheet">
+        <string notr="true">color:white;</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Box</enum>
+       </property>
+       <property name="lineWidth">
+        <number>2</number>
+       </property>
+       <property name="midLineWidth">
+        <number>2</number>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_5" rowstretch="0,0,0,0,0,0,0,0,0,0,0">
+        <item row="6" column="0">
+         <widget class="QLabel" name="applyto_label">
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color:white;</string>
+          </property>
+          <property name="text">
+           <string>Apply to</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="0">
+         <spacer name="verticalSpacer_17">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Fixed</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>10</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="transformation_label">
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color:white;</string>
+          </property>
+          <property name="text">
+           <string>Transformation</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QLineEdit" name="customfactor_text"/>
+        </item>
+        <item row="2" column="1">
+         <widget class="QComboBox" name="transformation_toolbox">
+          <property name="styleSheet">
+           <string notr="true">color:white;</string>
+          </property>
+          <item>
+           <property name="text">
+            <string>X100</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>#/m^2-&gt;mg/m^2</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>/cm^2-&gt; /m^2</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>/mm^2 -&gt; /m^2</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Cond to res</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="6" column="1">
+         <widget class="QComboBox" name="apply_toolbox">
+          <property name="styleSheet">
+           <string notr="true">color:white;</string>
+          </property>
+          <item>
+           <property name="text">
+            <string>X column</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Y column</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="toolbox_label">
+          <property name="font">
+           <font>
+            <pointsize>17</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color:white;</string>
+          </property>
+          <property name="text">
+           <string>Toolbox</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QLabel" name="custom_factor_label">
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color:white;</string>
+          </property>
+          <property name="text">
+           <string>Custom factor</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <spacer name="verticalSpacer_16">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Fixed</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>10</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="1" column="0">
+         <spacer name="verticalSpacer_14">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="9" column="1">
+         <widget class="QPushButton" name="apply_button">
+          <property name="font">
+           <font>
+            <pointsize>11</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton
+{
+color:white;
+background-color:#03C988;
+}
+QPushButton::hover
+{
+color:white;
+background-color:#6ECCAF;
+}</string>
+          </property>
+          <property name="text">
+           <string>Apply</string>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="0">
+         <spacer name="verticalSpacer_15">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Fixed</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>15</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="10" column="0">
+         <spacer name="verticalSpacer_18">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item row="1" column="3" alignment="Qt::AlignHCenter">
+      <widget class="QLabel" name="label">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <family>Yu Gothic</family>
+         <pointsize>30</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../../../../../../../../Downloads/logov1_b.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="4">
+      <spacer name="verticalSpacer_3">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="2" column="0" colspan="4">
+      <layout class="QVBoxLayout" name="verticalLayout" stretch="0,0,0,0,0,0">
+       <property name="spacing">
+        <number>8</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="article_data_main_label">
+         <property name="font">
+          <font>
+           <pointsize>15</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: white;</string>
+         </property>
+         <property name="text">
+          <string>Article data</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QGridLayout" name="gridLayout_2" rowstretch="0,0,0">
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="horizontalSpacing">
+          <number>18</number>
+         </property>
+         <property name="verticalSpacing">
+          <number>4</number>
+         </property>
+         <item row="1" column="2">
+          <widget class="QLineEdit" name="pub_year_text">
+           <property name="styleSheet">
+            <string notr="true">color:white;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="3">
+          <widget class="QLabel" name="journal_label">
+           <property name="styleSheet">
+            <string notr="true">color: white;</string>
+           </property>
+           <property name="text">
+            <string>Journal abbr.</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLineEdit" name="doi_text">
+           <property name="styleSheet">
+            <string notr="true">color:white;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="3">
+          <widget class="QLineEdit" name="journal_text">
+           <property name="styleSheet">
+            <string notr="true">color:white;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLabel" name="doi_label">
+           <property name="styleSheet">
+            <string notr="true">color: white;</string>
+           </property>
+           <property name="text">
+            <string>DOI</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="first_author_text">
+           <property name="styleSheet">
+            <string notr="true">color:white;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <widget class="QLabel" name="pub_year_label">
+           <property name="styleSheet">
+            <string notr="true">color: white;</string>
+           </property>
+           <property name="text">
+            <string>Publication year</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLabel" name="first_author_label">
+           <property name="styleSheet">
+            <string notr="true">color: white;</string>
+           </property>
+           <property name="text">
+            <string>First author</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QLabel" name="article_title_label">
+         <property name="styleSheet">
+          <string notr="true">color: white;</string>
+         </property>
+         <property name="text">
+          <string>Article title</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="article_title_text"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="article_comments_label">
+         <property name="styleSheet">
+          <string notr="true">color: white;</string>
+         </property>
+         <property name="text">
+          <string>Comments</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTextEdit" name="article_comments_text">
+         <property name="readOnly">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="1" column="2">
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../../../../../logov1_b.png</pixmap>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1567</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuDatabase">
+    <property name="title">
+     <string>Database</string>
+    </property>
+    <addaction name="actionConnect_to_DB"/>
+    <addaction name="actionDisconnect_from_DB"/>
+    <addaction name="actionDB_status"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionDocumentation"/>
+    <addaction name="actionContact_us"/>
+   </widget>
+   <addaction name="menuDatabase"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionConnect_to_DB">
+   <property name="text">
+    <string>Connect to DB</string>
+   </property>
+  </action>
+  <action name="actionDisconnect_from_DB">
+   <property name="text">
+    <string>Disconnect from DB</string>
+   </property>
+  </action>
+  <action name="actionDB_status">
+   <property name="text">
+    <string>DB status</string>
+   </property>
+  </action>
+  <action name="actionDocumentation">
+   <property name="text">
+    <string>Documentation</string>
+   </property>
+  </action>
+  <action name="actionContact_us">
+   <property name="text">
+    <string>Contact us</string>
+   </property>
+  </action>
+ </widget>
+ <tabstops>
+  <tabstop>doi_text</tabstop>
+  <tabstop>first_author_text</tabstop>
+  <tabstop>pub_year_text</tabstop>
+  <tabstop>journal_text</tabstop>
+  <tabstop>article_comments_text</tabstop>
+  <tabstop>material_box</tabstop>
+  <tabstop>coating_box</tabstop>
+  <tabstop>nw_length_text</tabstop>
+  <tabstop>nw_diameter_text</tabstop>
+  <tabstop>post_treatment_box</tabstop>
+  <tabstop>sim_checkbox</tabstop>
+  <tabstop>spectrum_comments_text</tabstop>
+  <tabstop>x_data_box</tabstop>
+  <tabstop>y_data_box</tabstop>
+  <tabstop>data_table</tabstop>
+  <tabstop>reset_article_data_button</tabstop>
+  <tabstop>reset_spectrum_metadata_button</tabstop>
+  <tabstop>reset_spectrum_data_button</tabstop>
+  <tabstop>commit_data_button</tabstop>
+  <tabstop>logs_text</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

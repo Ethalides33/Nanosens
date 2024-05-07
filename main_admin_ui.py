@@ -6,12 +6,12 @@ from math import sin, tan, radians
 
 import db_connection as db
 
-from PyQt5.QtWidgets import (
+from PyQt6.QtWidgets import (
     QApplication, QDialog, QMainWindow, QMessageBox, QScrollArea, QTableWidgetItem
 )
-#from PyQt5.uic import loadUi
-from PyQt5 import QtCore
-from PyQt5 import QtGui
+#from PyQt6.uic import loadUi
+from PyQt6 import QtCore
+from PyQt6 import QtGui
 
 from admin_ui import Ui_MainWindow
 
@@ -106,6 +106,7 @@ class Window(QMainWindow, Ui_MainWindow):
         self.post_treatment_box.setCurrentIndex(0)
         self.sim_checkbox.setChecked(False)
         self.spectrum_comments_text.setText("")
+        self.substrate_box.setCurrentIndex(0)
 
         self.Log("Spectrum  metadata reset succesfuly.")
 
@@ -142,14 +143,14 @@ class Window(QMainWindow, Ui_MainWindow):
         #self.Log("Data sent succesfully.") #should log summary of sent data
     
     def retrieve_article_data(self):
-        if(not self.doi_text.text() or not self.first_author_text.text() or not self.pub_year_text.text()):
-            self.Log('DOI, first author and publication year must be filled.')
+        if(not self.doi_text.text() or not self.first_author_text.text() or not self.pub_year_text.text() or not self.article_title_text.text()):
+            self.Log('DOI, first author, title and publication year must be filled.')
             return False
         if not self.pub_year_text.text().isdigit():
             self.Log('Publication year must be of type integer.')
             return False
 
-        article_data = {'doi':self.doi_text.text(), 'first_author':self.first_author_text.text(), 'year':self.pub_year_text.text(), 'journal': self.journal_text.text(), 'comments':self.article_comments_text.toPlainText()}
+        article_data = {'doi':self.doi_text.text(), 'first_author':self.first_author_text.text(), 'year':self.pub_year_text.text(), 'journal': self.journal_text.text(), 'comments':self.article_comments_text.toPlainText(),'title':self.article_title_text.text()}
         return article_data
 
     def retrieve_spectrum_data(self):
@@ -168,7 +169,7 @@ class Window(QMainWindow, Ui_MainWindow):
                 self.Log('NW diameter must be of type float.')
                 return False
 
-        spectrum_data = {'material': self.material_box.currentText(), 'coating':self.coating_box.currentText(), 'nw_length':self.nw_length_text.text(), 'nw_diameter':self.nw_diameter_text.text(), 'fabrication_method': self.fabrication_box.currentText(),'post_treatment':self.post_treatment_box.currentText(), 'sim_data':str(int(self.sim_checkbox.isChecked())), 'comments':self.spectrum_comments_text.toPlainText()}
+        spectrum_data = {'material': self.material_box.currentText(), 'coating':self.coating_box.currentText(), 'nw_length':self.nw_length_text.text(), 'nw_diameter':self.nw_diameter_text.text(), 'substrate':self.substrate_box.currentText(),'fabrication_method': self.fabrication_box.currentText(),'post_treatment':self.post_treatment_box.currentText(), 'sim_data':str(int(self.sim_checkbox.isChecked())), 'comments':self.spectrum_comments_text.toPlainText()}
         
         if not spectrum_data['nw_length']:
             spectrum_data['nw_length'] = None
@@ -307,7 +308,7 @@ class Window(QMainWindow, Ui_MainWindow):
             self.Log('File must be of type csv !')
 
     def eventFilter(self, source, event):
-        if (event.type() == QtCore.QEvent.KeyPress and event.matches(QtGui.QKeySequence.Paste)):
+        if (event.type() == QtCore.QEvent.Type.KeyPress and event.matches(QtGui.QKeySequence.StandardKey.Paste)):
             # ensure that the table receives the key event first
             res = super().eventFilter(source, event)
             

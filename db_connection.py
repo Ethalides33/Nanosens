@@ -3,7 +3,7 @@ from mysql.connector import errorcode
 from config import config
 import datetime as date
 
-gui_to_mysql_equiv = {'amd':'amd', 'Rs':'sheet_res', 'T':'trans', 'Haze':'haze', 'Emissivity':'emissivity', 'Lnw': 'nw_length', 'Dnw':'nw_diameter', 'Wavelength':'wavelength'}
+gui_to_mysql_equiv = {'amd':'amd', 'Rs':'sheet_res', 'T':'trans', 'Haze':'haze', 'Emissivity':'emissivity', 'Lnw': 'nw_length', 'Dnw':'nw_diameter', 'Wavelength':'wavelength','Coating':'coating_thickness', 'Max':'maximum_temperature'}
 
 def logToDB():
   try:
@@ -20,7 +20,7 @@ def logToDB():
   #   cnx.close()
 
 def sendData(conn, article_data, spectrum_data, values_data, x_data_header, y_data_header):
-  article_key = article_data['first_author'] + article_data['year']
+  article_key = article_data['first_author'] + article_data['year'] + article_data['journal'].split(' ')[0]
   spectrum_key = generate_spectrum_key(conn, article_key, x_data_header, y_data_header)
   print('key: ' + spectrum_key + '\n')
   log_article = send_article_data(conn, article_data, article_key)
@@ -45,9 +45,9 @@ def generate_spectrum_key(conn, article_key, x_data_header, y_data_header):
   return temp_key
 
 def send_spectrum_data(conn, spectrum_data, article_key, spectrum_key):
-  spectrum_query = '''INSERT IGNORE INTO spectra (key_spectrum, article_key, material, coating, mean_d_nw, mean_l_nw, fabrication_method, post_treatment, sim_data, comments, date_added) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)'''
+  spectrum_query = '''INSERT IGNORE INTO spectra (key_spectrum, article_key, material, coating, mean_d_nw, mean_l_nw, substrate, fabrication_method, post_treatment, sim_data, comments, date_added) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)'''
   print('sending spectrum data')
-  spectrum_vals = (spectrum_key, article_key, spectrum_data['material'], spectrum_data['coating'], spectrum_data['nw_diameter'], spectrum_data['nw_length'], spectrum_data['fabrication_method'], spectrum_data['post_treatment'], spectrum_data['sim_data'], spectrum_data['comments'], date.date.today())
+  spectrum_vals = (spectrum_key, article_key, spectrum_data['material'], spectrum_data['coating'], spectrum_data['nw_diameter'], spectrum_data['nw_length'], spectrum_data['substrate'], spectrum_data['fabrication_method'], spectrum_data['post_treatment'], spectrum_data['sim_data'], spectrum_data['comments'], date.date.today())
   if conn.is_connected:
       cursor = conn.cursor(buffered=True)
       try:
@@ -91,9 +91,9 @@ def send_values_data(conn, values_data, spectrum_key, x_data_header, y_data_head
 
 def send_article_data(conn, article_data, article_key):
   log_msg = ''
-  article_query = '''INSERT IGNORE INTO articles (key_article, doi, first_author,publication_year,journal_abbr,comments, date_added) VALUES (%s, %s, %s, %s, %s, %s, %s)'''
+  article_query = '''INSERT IGNORE INTO articles (key_article, doi, first_author,publication_year,title,journal_abbr,comments, date_added,user) VALUES (%s, %s, %s, %s, %s, %s, %s,%s,%s)'''
   
-  article_vals = (article_key, article_data['doi'], article_data['first_author'], article_data['year'], article_data['journal'], article_data['comments'], date.date.today())
+  article_vals = (article_key, article_data['doi'], article_data['first_author'], article_data['year'], article_data['title'], article_data['journal'], article_data['comments'], date.date.today(),config['user'])
   if conn.is_connected:
       cursor = conn.cursor(buffered=True)
       try:
