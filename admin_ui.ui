@@ -472,7 +472,7 @@
         <enum>QAbstractItemView::DragDrop</enum>
        </property>
        <property name="rowCount">
-        <number>50</number>
+        <number>126</number>
        </property>
        <attribute name="horizontalHeaderVisible">
         <bool>true</bool>
@@ -504,6 +504,386 @@
        <attribute name="verticalHeaderStretchLastSection">
         <bool>false</bool>
        </attribute>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nouvelle ligne</string>
+        </property>
+       </row>
        <row>
         <property name="text">
          <string>Nouvelle ligne</string>
@@ -1485,7 +1865,7 @@ background-color:#6ECCAF;
         </widget>
        </item>
        <item>
-        <layout class="QGridLayout" name="gridLayout_2" rowstretch="0,0,0">
+        <layout class="QGridLayout" name="gridLayout_2" rowstretch="0,0">
          <property name="leftMargin">
           <number>0</number>
          </property>

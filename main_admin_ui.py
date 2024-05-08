@@ -317,7 +317,7 @@ class Window(QMainWindow, Ui_MainWindow):
                 return False
             to_paste_rows = [row.split(';') for row in to_paste]
             for i, row in enumerate(to_paste_rows):
-                if i>50:
+                if i>125:
                     break
                 item1 = QTableWidgetItem(str(row[0]).replace(',','.'))
                 item2 = QTableWidgetItem(str(row[1]).replace(',','.'))
